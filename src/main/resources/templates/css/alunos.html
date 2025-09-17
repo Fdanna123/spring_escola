@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Alunos</title>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <link rel="stylesheet" href="style.css">
+
+    <form th:action="@{/alunos/salvar}" th:object="${aluno}" method="post">
+        Nome: <input type="text" th:field="*{nome}" required><br>
+        Matrícula: <input type="text" th:field="*{matricula}" required><br>
+        Curso: <input type="text" th:field="*{curso}" required><br>
+        Idade: <input type="number" th:field="*{idade}" required><br>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Lista de Alunos</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Nome</th><th>Matrícula</th><th>Curso</th><th>Idade</th>
+        </tr>
+        <tr th:each="a : ${alunos}">
+            <td th:text="${a.id}"></td>
+            <td th:text="${a.nome}"></td>
+            <td th:text="${a.matricula}"></td>
+            <td th:text="${a.curso}"></td>
+            <td th:text="${a.idade}"></td>
+        </tr>
+    </table>
+</body>
+</html>
