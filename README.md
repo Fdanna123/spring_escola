@@ -283,8 +283,6 @@ Hibernate não cria tabelas: verifique spring.jpa.hibernate.ddl-auto=update.
 
 Erro de timezone: adicione ?serverTimezone=UTC na URL JDBC.
 
-Anthony P> e Maria Danna
-
-Aluno: ____________________
+Anthony P. e Maria Danna
 
 Data: 16/09/2025
